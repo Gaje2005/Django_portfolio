@@ -1,0 +1,258 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Developer Portfolio</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body class="bg-black text-white overflow-x-hidden">
+
+<!-- ANIMATED VIDEO BACKGROUND -->
+<video class="video-background" autoplay muted loop playsinline>
+<source src="{% static 'videos/bg1.mp4' %}" type="video/mp4">
+</video>
+
+
+<!-- NAVBAR -->
+
+<nav class="nav-glass">
+
+<div class="container">
+
+<h1 class="logo">DEVELOPER <span>PORTFOLIO</span></h1>
+
+<button class="menu-toggle" id="menu-toggle">
+<span></span>
+<span></span>
+<span></span>
+</button>
+
+<ul class="nav-links" id="nav-links">
+
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section id="home" class="hero">
+
+<div class="hero-container">
+
+<img src="{% static 'images/profile.jpg' %}" alt="Profile Picture" class="profile-image">
+
+<h1 class="hero-title">
+Hi I'm <span class="gradient">John Micheal Gaje</span>
+</h1>
+
+<h2 class="hero-subtitle">Full Stack Developer </h2>
+
+<p class="hero-desc">
+Building web apps intelligently
+</p>
+
+<a href="#projects" class="btn-glow">View Projects</a>
+
+</div>
+
+</section>
+
+<!-- ABOUT ME SECTION -->
+
+<section id="about" class="section">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="about-container">
+
+<p>
+I am a passionate developer specializing in Django, AI systems,
+and scalable backend architecture. I enjoy creating intelligent
+software and solving complex problems. Currently a third year
+IT student at NORSU BSC.
+</p>
+
+</div>
+
+</section>
+
+<!-- SKILLS SECTION -->
+
+<section id="skills" class="section">
+
+<h2 class="section-title">Tech Stack</h2>
+
+<div class="skills-grid">
+
+<div class="skill-card">
+<h3>Python</h3>
+<div class="bar"><span style="width:95%"></span></div>
+</div>
+
+<div class="skill-card">
+<h3>Django</h3>
+<div class="bar"><span style="width:90%"></span></div>
+</div>
+
+<div class="skill-card">
+<h3>Mysql</h3>
+<div class="bar"><span style="width:85%"></span></div>
+</div>
+
+<div class="skill-card">
+<h3>JavaScript</h3>
+<div class="bar"><span style="width:80%"></span></div>
+</div>
+
+</div>
+
+</section>
+
+<!-- EDUCATION SECTION -->
+
+<section id="education" class="section">
+
+<h2 class="section-title">Education</h2>
+
+<div class="education-grid">
+
+<div class="education-card">
+
+<div class="education-header">
+
+<h3>Bachelor of Science in Information Technology</h3>
+
+<span class="education-date">2023 - Present</span>
+
+</div>
+
+<div class="education-body">
+
+<p class="institution">Negros Oriental State University</p>
+
+<p class="description">
+Focused on system and web development.
+</p>
+
+</div>
+
+</div>
+
+<div class="education-card">
+
+<div class="education-header">
+
+<h3>Nagbalaye National High School</h3>
+
+<span class="education-date">2017 - 2023</span>
+
+</div>
+
+
+
+</div>
+
+<div class="education-card">
+
+<div class="education-header">
+
+<h3> Certifications</h3>
+
+<span class="education-date">2025</span>
+
+</div>
+
+<div class="education-body">
+
+<p class="institution">2-days Seminar-Workshop on "Cybersecurity and Modern Web Development</p>
+
+<p class="description">
+Held at the Audio Visual Room of Negros Occidental State University. from December 10-11, 2025.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS SECTION -->
+
+<section id="projects" class="section">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="projects-grid">
+
+
+<div class="project-card">
+
+<h3>Mini Hotel System</h3>
+
+<p>
+Current working on collaboration on this project not yet finished
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT SECTION -->
+
+<section id="contact" class="section">
+
+<h2 class="section-title">Contact</h2>
+
+<div class="contact-box">
+
+<p>Email: <a href="mailto:johnmichealgaje@gmail.com" class="contact-link">johnmichealgaje@gmail.com</a></p>
+<p>GitHub: <a href="https://github.com/johnmichel-gaje" target="_blank" class="contact-link">github.com/johnmicheal-gaje</a></p>
+<p>Facebook: <a href="https://www.facebook.com/johnmichael.p.gaje" target="_blank" class="contact-link">facebook.com/John Michael P. Gaje</a></p>
+
+</div>
+
+</section>
+
+<script>
+// Mobile menu toggle
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
+
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+// Close mobile menu when clicking on a link
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+    });
+});
+</script>
+
+</body>
+
+</html>
